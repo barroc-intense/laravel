@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('sales', 'salesController');
+Route::resource('finance', 'financeController');
+Route::resource('maintenance', 'maintenanceController');
+Route::resource('inkoop', 'inkoopController');
