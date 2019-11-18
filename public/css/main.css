@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    background: #cccccc;
+    height: 50px;
+}
+.dropbtn {
+    background-color: #0c0c0c;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #cccccc;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: #cccccc;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+header img{
+    width: 70px;
+}
+.mainlinks a{
+    text-decoration: none;
+    color: #0c0c0c;
+    font-size: 22px;
+    border-style: solid;
+    border-width: 2px;
+}
+.mainlinks{
+    margin-top: 10px;
+}
+section{
+    display: flex;
+    justify-content: space-between;
+}
+.imgright img{
+    width: 350px;
+}
+.imglinks img{
+    width: 372px;
+}
+.apraats{
+    display: flex;
+    height: 150px;
+
+}
+.apraats img{
+    width: 170px;
+    height: 160px;
+}
+.imgmiddel img{
+    width: 99vw;
+}

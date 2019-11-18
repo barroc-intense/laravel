@@ -6,10 +6,26 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Barroc Intense</title>
+    <link rel="stylesheet" href="{{asset('css/main.css')}}">
 </head>
 <body>
     <header>
-        <h1>Barroc Intense</h1>
+        <div class="mainrecht">
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                    <a href="javascript:void(0)">Link 1</a>
+                    <a href="javascript:void(0)">Link 2</a>
+                    <a href="javascript:void(0)">Link 3</a>
+                </div>
+            </div>
+        </div>
+
+            <img src="img/Logo.png" alt="">
+
+        <div class="mainlinks">
+            <a href="">Storing</a>
+        </div>
     </header>
     <main>
         @yield('content')
