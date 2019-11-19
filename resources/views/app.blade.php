@@ -8,6 +8,7 @@
 
     <title>Barroc Intense</title>
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
@@ -32,7 +33,24 @@
         @yield('content')
     </main>
     <footer>
-
+        <div class="container">
+            <div class="footerp">
+                <p>5011AL</p>
+                <p>Eccardstrat 51</p>
+                <p>Tilburg</p>
+            </div>
+            <div class="footerimg">
+                <img src="img/Logo.png" alt="">
+            </div>
+        </div>
+        <div class="socialmedia">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
     </footer>
 </body>
 </html>
