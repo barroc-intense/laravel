@@ -3,7 +3,7 @@
     padding: 0px;
 }
 header{
-    background: #cccccc;
+    background: rgb(231, 238, 231);
     height: 50px;
 }
 .dropbtn {
@@ -21,7 +21,7 @@ header{
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #cccccc;
+    background-color: rgb(231, 238, 231);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -36,7 +36,7 @@ header{
     display: block;
 }
 .dropdown:hover .dropbtn {
-    background-color: #cccccc;
+    background-color: rgb(231, 238, 231);
 }
 header{
     display: flex;
@@ -75,8 +75,12 @@ section{
     width: 170px;
     height: 160px;
 }
+.imgmiddel{
+    background: #ffda4b;
+}
 .imgmiddel img{
-    width: 99vw;
+    width: 98vw;
+
 }
 footer{
     background-color: black;
