@@ -9,6 +9,11 @@
     <title>Barroc Intense</title>
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function popUp() {
+            document.getElementById("info").style.display = "none";
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -31,6 +36,7 @@
     </header>
     <main>
         @yield('content')
+
     </main>
     <footer>
         <div class="container">

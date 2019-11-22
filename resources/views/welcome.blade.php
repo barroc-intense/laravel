@@ -1,16 +1,35 @@
 @extends('app')
 @section('content')
+
 <section>
     <div class="imgright">
         <img src="img/right.jpg" alt="">
     </div>
-    <div class="apraats">
+    <div class="cookie">
+        <div class="apraats">
 
-            <img src="img/apraaat.png" alt="">
+                <img src="img/apraaat.png" alt="">
 
 
-            <img src="img/apraat.png" alt="">
+                <img src="img/apraat.png" alt="">
 
+        </div>
+        <div class="info" id="info">
+            <h2>cookies en privacy</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aut beatae dignissimos eius eveniet nisi recusandae, saepe velit vero.
+                Aut cumque debitis deleniti expedita harum laborum mollitia odio qui temporibus vel?
+                Amet consequuntur corporis culpa dicta dolor dolore, ea exercitationem harum inventore laboriosam,
+                laborum maiores mollitia nihil praesentium rem saepe sequi ullam unde voluptas voluptatum.
+                Aspernatur debitis id nesciunt nostrum obcaecati optio perspiciatis quidem, saepe, sed temporibus,
+                unde veritatis voluptatum! Accusantium at atque corporis delectus dolorem doloremque dolores eaque explicabo
+                fugit harum ipsa iure laborum maxime molestias nesciunt,
+
+            </p>
+
+            <p class="close" onclick="popUp()">accepteren</p>
+        </div>
     </div>
     <div class="imglinks">
         <img src="img/links.jpg" alt="">
