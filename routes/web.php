@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('buy', function (){
+    return view('buy');
+});
+
 Route::resource('sales', 'salesController');
 Route::resource('finance', 'financeController');
 Route::resource('maintenance', 'maintenanceController');
