@@ -13,7 +13,10 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
+Auth::routes();
+
+Route::resource('Purchases','PurachsesController')->middleware('auth');
 
 Route::resource('sales', 'salesController');
 Route::resource('finance', 'financeController');

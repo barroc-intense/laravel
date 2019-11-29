@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -21,18 +22,46 @@
             <div class="dropdown">
                 <button class="dropbtn">Menu</button>
                 <div class="dropdown-content">
-                    <a href="javascript:void(0)">Link 1</a>
-                    <a href="javascript:void(0)">Link 2</a>
-                    <a href="javascript:void(0)">Link 3</a>
+                    <a href="{{ route('home') }}">Home</a>
+                    <a href="{{ route('inkoop.index') }}">Inkoop</a>
+                    @auth
+                        <a href="{{ route('Purchases.index') }}">Overzicht Prudocten</a>
+                    @endauth
+                    @guest
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li>
+
+                    @else
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    @endguest
+
                 </div>
             </div>
         </div>
 
             <img src="img/Logo.png" alt="">
-
-        <div class="mainlinks">
-            <a href="">Storing</a>
-        </div>
+        @auth
+            <div class="mainlinks">
+                <a href="{{ route('maintenance.index') }}">Storing</a>
+            </div>
+        @endauth
     </header>
     <main>
         @yield('content')
