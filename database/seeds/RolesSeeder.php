@@ -46,7 +46,7 @@ class RolesSeeder extends Seeder
                 'rank' => 8
             ],
             [
-                'name' => 'Head Sales',
+                'name' => 'Head_Sales',
                 'rank' => 9
             ],
             [
