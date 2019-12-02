@@ -15,9 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('buy', function (){
-    return view('buy');
-});
+Route::get('quotations', 'quotationsController@index')->name('quotations.index');
+Route::post('quotations', 'quotationsController@mail')->name('quotations.mail');
 
 Route::resource('sales', 'salesController');
 Route::resource('finance', 'financeController');

@@ -3,7 +3,7 @@
 
     <h2>prijsopgave</h2>
 
-    <form action="">
+    <form action="{{ route('quotations.mail') }}" method="post">
         @csrf
         <div class="fill">
             <label for="type">type</label>
@@ -26,6 +26,10 @@
         <div class="fill">
             <label for="kvk">kvk nummer</label>
             <input type="number" name="kvk" id="kvk" required>
+        </div>
+
+        <div class="btn">
+            <input type="submit">
         </div>
     </form>
 

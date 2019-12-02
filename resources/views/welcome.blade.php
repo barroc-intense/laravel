@@ -9,7 +9,7 @@
         <div class="apraats">
             <div class="apraat">
                 <img src="img/apraaat.png" alt="">
-                <a href="javascript:void(0)">bestel</a>
+                <a href="{{ route("quotations.index") }}">bestel</a>
             </div>
             <div class="apraat">
                 <img src="img/apraat.png" alt="">
