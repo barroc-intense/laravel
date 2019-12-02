@@ -15,10 +15,10 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
-Auth::routes();
 
 Route::post('quotations', 'quotationsController@mail')->name('quotations.mail');
 Route::get('quotations', 'quotationsController@index')->name('quotations.index');
+
 Auth::routes();
 Route::group(['middleware' => 'employee'], function () {
 
@@ -31,6 +31,19 @@ Route::group(['middleware' => 'employee'], function () {
         $roles = \DB::select('SELECT * FROM roles');
         return view('auth/register',  ['roles' => $roles]);
     });
+    Route::get('/notes', function (){
+        $users = \DB::select('SELECT * FROM users WHERE role_id=1');
+        return view('sales/notes', ['users' => $users]);
+    });
 });
 
+
+Route::resource('customer', 'customerController');
+
 Route::get('/redirect', 'redirectController@redirect');
+
+
+
+
+//Route::get('/home', 'HomeController@index')->name('home');
+

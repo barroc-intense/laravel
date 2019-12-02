@@ -10,6 +10,7 @@ class redirectController extends Controller
     //
     public function Redirect(){
         $loggedInUser = Auth::user();
+        $customer = Auth::id();
 
 
         if( $loggedInUser->role->rank == 12) {

@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use App\User;
+use Illuminate\Support\Facades\Hash;
 
-class salesController extends Controller
+class customerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +16,10 @@ class salesController extends Controller
      */
     public function index()
     {
-        return view('sales/index');
+        //
+        $customer = Auth::id();
+
+        return view('customer/index', ['customer' => $customer]);
     }
 
     /**
@@ -26,7 +30,6 @@ class salesController extends Controller
     public function create()
     {
         //
-        return view('sales/create');
     }
 
     /**
@@ -38,23 +41,6 @@ class salesController extends Controller
     public function store(Request $request)
     {
         //
-        \DB::table('users')
-            ->insert([
-                'name'          => $request->name,
-                'password'      => Hash::make($request['password']),
-                'email'         => $request->email,
-                'role_id'       => 1
-            ]);
-
-        $id = Auth::id();
-        \DB::table('notes')
-            ->insert([
-                'sales_id'      => $id,
-                'customer_id'   => $request->customer_id,
-                'content'       => $request->description
-            ]);
-
-        return view('welcome');
     }
 
     /**
@@ -77,6 +63,9 @@ class salesController extends Controller
     public function edit($id)
     {
         //
+        $customer = User::find($id);
+
+        return view('customer.edit', ['customer' => $customer]);
     }
 
     /**
@@ -89,6 +78,15 @@ class salesController extends Controller
     public function update(Request $request, $id)
     {
         //
+        \DB::table('users')
+            ->where('id', $id)
+            ->update([
+                'name'          => $request->name,
+                'email'         => $request->email,
+                'password'  =>  Hash::make($request['password'])
+            ]);
+
+        return redirect('/');
     }
 
     /**
