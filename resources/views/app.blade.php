@@ -22,6 +22,17 @@
                 <button class="dropbtn">Menu</button>
                 <div class="dropdown-content">
                     <a href="javascript:void(0)">Link 1</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
                     <a href="javascript:void(0)">Link 2</a>
                     <a href="javascript:void(0)">Link 3</a>
                 </div>

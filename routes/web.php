@@ -30,7 +30,13 @@ Route::group(['middleware' => 'employee'], function () {
         $roles = \DB::select('SELECT * FROM roles');
         return view('auth/register',  ['roles' => $roles]);
     });
+    Route::get('/notes', function (){
+        $users = \DB::select('SELECT * FROM users WHERE role_id=1');
+        return view('sales/notes', ['users' => $users]);
+    });
 });
+
+Route::resource('customer', 'customerController');
 
 Route::get('/redirect', 'redirectController@redirect');
 
