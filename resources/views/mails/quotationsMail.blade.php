@@ -1,12 +1,10 @@
 @component('mail::message')
-    # Introduction
+    #nieuwe prijsopgave
+    type apparaat: {{ $data->type }}
 
-    The body of your message.
+    email: {{ $data->email }}
 
-    @component('mail::button', ['url' => ''])
-        Button Text
-    @endcomponent
+    bedrijfs naam: {{ $data->company }}
 
-    Thanks,<br>
-    {{ config('app.name') }}
+    kvk: {{ $data->kvk }}
 @endcomponent

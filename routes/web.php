@@ -14,10 +14,11 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::post('quotations', 'quotationsController@mail')->name('quotations.mail');
 Route::get('quotations', 'quotationsController@index')->name('quotations.index');
+
 Auth::routes();
 Route::group(['middleware' => 'employee'], function () {
 
