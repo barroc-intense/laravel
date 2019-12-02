@@ -16,8 +16,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-
+Route::post('quotations', 'quotationsController@mail')->name('quotations.mail');
+Route::get('quotations', 'quotationsController@index')->name('quotations.index');
 Auth::routes();
 Route::group(['middleware' => 'employee'], function () {
 
@@ -36,6 +36,7 @@ Route::group(['middleware' => 'employee'], function () {
     });
 });
 
+
 Route::resource('customer', 'customerController');
 
 Route::get('/redirect', 'redirectController@redirect');
@@ -44,3 +45,4 @@ Route::get('/redirect', 'redirectController@redirect');
 
 
 //Route::get('/home', 'HomeController@index')->name('home');
+
