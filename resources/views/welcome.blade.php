@@ -13,7 +13,7 @@
             </div>
             <div class="apraat">
                 <img src="img/apraat.png" alt="">
-                <a href="javascript:void(0)">bestel</a>
+                <a href="{{ route("quotations.index") }}">bestel</a>
             </div>
         </div>
         <div class="info" id="info">
