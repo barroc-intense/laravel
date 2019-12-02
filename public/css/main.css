@@ -71,12 +71,21 @@ section{
     justify-content: space-evenly;
 
 }
-.apraats img{
+.apraats .apraat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.apraats .apraat img{
     width: 170px;
     height: 160px;
 }
-.imgmiddel{
-    background: #ffda4b;
+.apraats .apraat a {
+    text-decoration: none;
+    color: #000;
+    background: #ffd700;
+    padding: 5px 10px;
+    margin: 0;
 }
 .imgmiddel img{
     width: 98vw;
