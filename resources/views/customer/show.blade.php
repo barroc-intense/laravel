@@ -1,4 +1,5 @@
 @extends('app')
+
 @section('content')
 <!doctype html>
 <html lang="en">
@@ -10,13 +11,8 @@
     <title>Document</title>
 </head>
 <body>
-<ul>
-    @foreach($Supplies as $supply)
-        <h3>{{$supply->name}}</h3>
-        <h4>{{$supply->price}}</h4>
-    @endforeach
-</ul>
+    <h1 class="card-title"> Uw naam: {{ $customers->name }} </h1>
+    <h1 class="card-title">Uw Email: {{ $customers->email }} </h1>
 </body>
 </html>
-
 @endsection

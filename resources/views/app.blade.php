@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -24,15 +25,22 @@
                 <div class="dropdown-content">
                     <a href="{{ route('home') }}">Home</a>
                     <a href="{{ route('inkoop.index') }}">Inkoop</a>
+                    <a href="{{ route('customer.index') }}">Mijn gegevens</a>
                     @auth
-                        <a href="{{ route('Purchases.index') }}">Overzicht Prudocten</a>
+                        <a href="{{ route('purachses.index') }}">Overzicht Prudocten</a>
+                        @if (auth()->user()->role_id !== 1)
+                            <a href="{{ route('leases.index') }}">Contract Aanmaken</a>
+                        @endif
                     @endauth
-                    @guest
+
+                        @guest
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
-
                     @else
+{{--                        @if(Auth::check())--}}
+{{--                            <p>test</p>--}}
+{{--                        @endif--}}
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>

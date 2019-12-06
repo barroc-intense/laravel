@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Supplies;
-
 class PurachsesController extends Controller
 {
     /**
@@ -16,7 +15,7 @@ class PurachsesController extends Controller
     {
 
         $Supplies = Supplies::All();
-        return view('Purchases/show', ['Supplies' => $Supplies]);
+        return view('purchases/show', ['Supplies' => $Supplies]);
 
     }
 
@@ -47,10 +46,10 @@ class PurachsesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Purachases $Supplies)
+    public function show(purachses $Supplies)
     {
-        return "Hier!";
-//        return view('purachases/show', ['Supplies' => $Supplies]);
+//        return "Hier!";
+//        return view('Purachases/show', ['Supplies' => $Supplies]);
     }
 
     /**

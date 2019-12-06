@@ -15,7 +15,9 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
-
+Route::resource('purachses','purachsesController');
+Route::resource('customer', 'customerController');
+//Route::resource('error', 'errorController');
 Route::post('quotations', 'quotationsController@mail')->name('quotations.mail');
 Route::get('quotations', 'quotationsController@index')->name('quotations.index');
 
@@ -38,7 +40,8 @@ Route::group(['middleware' => 'employee'], function () {
 });
 
 
-Route::resource('customer', 'customerController');
+//Route::get('customer', 'customerController@show');
+
 
 Route::get('/redirect', 'redirectController@redirect');
 

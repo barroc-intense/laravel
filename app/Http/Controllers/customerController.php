@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
+use App\Customer;
 use Illuminate\Support\Facades\Hash;
 
 class customerController extends Controller
@@ -16,10 +17,11 @@ class customerController extends Controller
      */
     public function index()
     {
-        //
-        $customer = Auth::id();
 
-        return view('customer/index', ['customer' => $customer]);
+        $id = Auth::id();
+//        $Supplies = Supplies::All();
+        $customer = User::Find($id);
+        return view('customer.show', ['customers' => $customer]);
     }
 
     /**
@@ -49,9 +51,12 @@ class customerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Customer $customer)
     {
-        //
+//        $customer = Auth::user();
+//        return view('customer.show',['customer' =>$customer]);
+
+        return view('customer.show', ['customer' => $customer]);
     }
 
     /**
@@ -64,7 +69,6 @@ class customerController extends Controller
     {
         //
         $customer = User::find($id);
-
         return view('customer.edit', ['customer' => $customer]);
     }
 
