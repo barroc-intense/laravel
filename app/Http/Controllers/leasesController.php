@@ -1,14 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Mail\financeMail;
+use App\Quotations;
+use App\Leases;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use App\User;
-use App\Customer;
-use Illuminate\Support\Facades\Hash;
 
-class customerController extends Controller
+class leasesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,11 +15,12 @@ class customerController extends Controller
      */
     public function index()
     {
+        $quotations = Quotations::All();
+        $leasetypes = \App\leaseType::All();
+        $financesid = \App\User::All();
 
-        $id = Auth::id();
-//        $Supplies = Supplies::All();
-        $customer = User::Find($id);
-        return view('customer.show', ['customers' => $customer]);
+        return view('Leases.index', ['quotations' => $quotations ,'leasetypes' => $leasetypes , 'financesid'=>$financesid]);
+
     }
 
     /**
@@ -31,7 +30,7 @@ class customerController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -42,7 +41,29 @@ class customerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($request->BKR == "on"){
+            $BKR = true;
+        }
+        else {
+            $BKR = false;
+        }
+
+//        Leases::insert([
+//            'leaseType_id'=>$request->leaseType_id,
+//            'customer_id' => $request->customer_id,
+//            'finance_id'  =>$request->finance_id,
+//            'KVK'         =>$request->KVK,
+//            'BKR'         =>$BKR,
+//            'appraat'     =>$request->appraat,
+//            'price'       =>$request->price,
+//            'created_at'  =>now(),
+//            'updated_at'  =>now()
+//        ]);
+
+        return (new financeMail($request))->render();
+
+//        \Mail::to('roks.freek@gmail.com')->send(new financeMail($request));
+//        return redirect(route('home'));
     }
 
     /**
@@ -51,12 +72,9 @@ class customerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Customer $customer)
+    public function show($id)
     {
-//        $customer = Auth::user();
-//        return view('customer.show',['customer' =>$customer]);
-
-        return view('customer.show', ['customer' => $customer]);
+        //
     }
 
     /**
@@ -68,8 +86,6 @@ class customerController extends Controller
     public function edit($id)
     {
         //
-        $customer = User::find($id);
-        return view('customer.edit', ['customer' => $customer]);
     }
 
     /**
@@ -82,15 +98,6 @@ class customerController extends Controller
     public function update(Request $request, $id)
     {
         //
-        \DB::table('users')
-            ->where('id', $id)
-            ->update([
-                'name'          => $request->name,
-                'email'         => $request->email,
-                'password'  =>  Hash::make($request['password'])
-            ]);
-
-        return redirect('/');
     }
 
     /**

@@ -73,4 +73,5 @@ class RolesSeeder extends Seeder
             ]);
         }
     }
+
 }

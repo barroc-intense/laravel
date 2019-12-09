@@ -16,8 +16,12 @@ class CreateQuotationsTable extends Migration
         // offerte
         Schema::create('quotations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('sales_id');
-            $table->unsignedBigInteger('customer_id');
+            $table->unsignedBigInteger('sales_id')->nullable();
+            $table->unsignedBigInteger('customer_id')->nullable();
+            $table->string('type');
+            $table->string('email');
+            $table->string('company_name');
+            $table->bigInteger('KVK');
             $table->timestamps();
 
             $table->foreign('sales_id')
