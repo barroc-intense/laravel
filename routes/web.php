@@ -24,6 +24,7 @@ Route::get('quotations', 'quotationsController@index')->name('quotations.index')
 Auth::routes();
 Route::group(['middleware' => 'employee'], function () {
 
+    Route::resource('leases','leasesController');
     Route::resource('sales', 'salesController');
     Route::resource('finance', 'financeController');
     Route::resource('maintenance', 'maintenanceController');
