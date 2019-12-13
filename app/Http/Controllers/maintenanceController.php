@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use App\Error;
 
 class maintenanceController extends Controller
 {
@@ -13,7 +13,11 @@ class maintenanceController extends Controller
      */
     public function index()
     {
-        return view('maintenance/index');
+        $leases = \App\Leases::All();
+        $users = \App\User::All();
+        $storings = \App\Error::All();
+
+        return view('maintenance/index',['users' => $users ,'leases' => $leases ,'storings'=>$storings]);
     }
 
     /**
@@ -34,7 +38,15 @@ class maintenanceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Error::insert([
+            'user_id'=>$request->user_id,
+            'lease_id'=>$request->lease_id,
+            'name'=>$request->name,
+            'description'=>$request->description,
+            'created_at'  =>now(),
+            'updated_at'  =>now()
+        ]);
+        return redirect(route('home'));
     }
 
     /**
@@ -43,9 +55,11 @@ class maintenanceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $storings = \App\Error::All();
+
+        return view('maintenance/show',['storings'=>$storings]);
     }
 
     /**

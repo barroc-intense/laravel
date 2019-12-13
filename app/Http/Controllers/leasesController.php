@@ -48,17 +48,17 @@ class leasesController extends Controller
             $BKR = false;
         }
 
-//        Leases::insert([
-//            'leaseType_id'=>$request->leaseType_id,
-//            'customer_id' => $request->customer_id,
-//            'finance_id'  =>$request->finance_id,
-//            'KVK'         =>$request->KVK,
-//            'BKR'         =>$BKR,
-//            'appraat'     =>$request->appraat,
-//            'price'       =>$request->price,
-//            'created_at'  =>now(),
-//            'updated_at'  =>now()
-//        ]);
+        Leases::insert([
+            'leaseType_id'=>$request->leaseType_id,
+            'customer_id' => $request->customer_id,
+            'finance_id'  =>$request->finance_id,
+            'KVK'         =>$request->KVK,
+            'BKR'         =>$BKR,
+            'appraat'     =>$request->appraat,
+            'price'       =>$request->price,
+            'created_at'  =>now(),
+            'updated_at'  =>now()
+        ]);
 
         return (new financeMail($request))->render();
 

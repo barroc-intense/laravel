@@ -1,5 +1,7 @@
 @extends('app')
+
 @section('content')
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,12 +13,14 @@
 </head>
 <body>
 <ul>
-    @foreach($Supplies as $supply)
-        <h3>{{$supply->name}}</h3>
-        <h4>{{$supply->price}}</h4>
+    @foreach($storings as $storing)
+        <li class="storing" style="margin-bottom: 20px;">
+            <h3>{{$storing->name}}</h3>
+            <h4>{{$storing->description}}</h4>
+        </li>
     @endforeach
 </ul>
+
 </body>
 </html>
-
 @endsection
