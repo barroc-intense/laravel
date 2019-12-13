@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
+use App\purchases;
 use Illuminate\Http\Request;
 use App\Supplies;
 class PurachsesController extends Controller
@@ -48,8 +50,9 @@ class PurachsesController extends Controller
      */
     public function show(purachses $Supplies)
     {
-//        return "Hier!";
-//        return view('Purachases/show', ['Supplies' => $Supplies]);
+        $purchases = purchases::all();
+
+        return view('Purachases/show', ['Supplies' => $Supplies, 'product' => $purchases]);
     }
 
     /**
@@ -60,7 +63,13 @@ class PurachsesController extends Controller
      */
     public function edit($id)
     {
-        //
+
+        $products = supplies::find($id);
+
+        return view('Purchases/edit', [
+            'products' => $products
+        ]);
+
     }
 
     /**
@@ -72,7 +81,18 @@ class PurachsesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $product = supplies::find($id);
+
+
+        \DB::table('supplies')
+            ->where('id', $id)
+            ->update([
+            'name' => $request->name,
+            'price' => $request->price
+        ]);
+
+
+        return redirect('/');
     }
 
     /**
