@@ -16,15 +16,12 @@ class CreateWorkOrdersTable extends Migration
         Schema::create('workOrders', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('maintenance_id');
-            $table->unsignedBigInteger('lease_id');
+            $table->string('description');
             $table->timestamps();
 
             $table->foreign('maintenance_id')
                 ->references('id')
                 ->on('users');
-            $table->foreign('lease_id')
-                ->references('id')
-                ->on('leases');
         });
     }
 

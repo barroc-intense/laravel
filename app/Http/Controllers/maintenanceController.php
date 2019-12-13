@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class maintenanceController extends Controller
 {
@@ -24,6 +25,8 @@ class maintenanceController extends Controller
     public function create()
     {
         //
+        return view('maintenance/create');
+
     }
 
     /**
@@ -34,7 +37,15 @@ class maintenanceController extends Controller
      */
     public function store(Request $request)
     {
+        $id = Auth::id();
         //
+        \DB::table('workorders')
+            ->insert([
+                'maintenance_id'          => $id,
+                'description'       => $request->description
+            ]);
+
+        return view('welcome');
     }
 
     /**
