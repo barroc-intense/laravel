@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19057d3f-46b0-45db-8061-e60815377b26" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/Leases/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/maintenance/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/purchases/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/leaseType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/leaseType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_19_084243_create_quotations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_19_084243_create_quotations_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Error.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Error.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PurachsesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PurachsesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/leasesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/leasesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/maintenanceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/maintenanceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Leases.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Leases.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/purchases.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/purchases.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/maintenance/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/maintenance/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/purchases/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/purchases/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -116,7 +123,7 @@
   <component name="ProjectId" id="1TpcNz9ewXNvfeWZDhqqm3Mb5FH" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../laravel_webshop/laravel_webshop_2019/laravel_webshop_2019/laravel_webshop_2019" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -170,6 +177,8 @@
       <workItem from="1575274205481" duration="8035000" />
       <workItem from="1575469925216" duration="24000" />
       <workItem from="1575642672837" duration="1048000" />
+      <workItem from="1575970398899" duration="15359000" />
+      <workItem from="1576059648332" duration="1746000" />
     </task>
     <servers />
   </component>

@@ -27,6 +27,7 @@
                     <a href="{{ route('inkoop.index') }}">Inkoop</a>
                     <a href="{{ route('customer.index') }}">Mijn gegevens</a>
                     @auth
+                        <a href="{{ route('maintenance.show', 1) }}">Storingen Bekijken</a>
                         <a href="{{ route('purachses.index') }}">Overzicht Prudocten</a>
                         @if (auth()->user()->role_id !== 1)
                             <a href="{{ route('leases.index') }}">Contract Aanmaken</a>

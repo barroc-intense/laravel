@@ -1,25 +1,31 @@
 @extends('app')
 
 @section('content')
-    <form action="" class="storingformulier">
-        <form action="/action_page.php">
+    <form action="{{ route('maintenance.store') }}" method="post">
+    @csrf
 
-            <label for="fname">Storing</label>
-            <input type="text" id="fname" name="firstname" placeholder="Schrijf uw storing">
+        <select class="form-control" name="user_id" id="">
+            @foreach($users as $user)
+                <option value="{{ $user->id }}"> {{ $user->id }}</option>
+            @endforeach
+        </select>
+         <select class="form-control" name="lease_id" id="">
+            @foreach($leases as $lease)
+                <option value="{{ $lease->id }}"> {{ $lease->id }}</option>
+            @endforeach
+         </select>
+        <div class="form-group">
+            <label for="name">Naam:</label>
+            <input class="form-control" type="text" name="name" id="name">
+        </div>
+        <div class="form-group">
+            <label for="description">Beschrijving:</label>
+            <input class="form-control" type="text" name="description" id="description">
+        </div>
 
-            <label for="fname">Uw naam</label>
-            <input type="text" id="fname" name="firstname" placeholder="Schrijf uw naam hier in">
+                        <div class="form-group">
+                            <input type="submit" value="Contract aanmaken">
+                        </div>
 
-            <label for="fname">Achter naam</label>
-            <input type="text" id="fname" name="firstname" placeholder="Schrijf uw achternaam hier in">
 
-            <label for="lname">Email</label>
-            <input type="text" id="lname" name="lastname" placeholder="Schrijf uw email hier in">
-
-{{--            <form action="{{route('orders.store')}}" method="post">--}}
-{{--                @csrf--}}
-{{--                <input type="hidden" name="product_id" value="{{$product->id}}" >--}}
-{{--                <input type="submit" value="Kopuh" class="btn btn-info">--}}
-{{--            </form>--}}
-    </form>
 @endsection
