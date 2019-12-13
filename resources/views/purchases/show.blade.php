@@ -14,6 +14,7 @@
     @foreach($Supplies as $supply)
         <h3>{{$supply->name}}</h3>
         <h4>{{$supply->price}}</h4>
+        <form action=""></form>
     @endforeach
 </ul>
 </body>
