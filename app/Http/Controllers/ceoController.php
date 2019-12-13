@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\CustomerMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -37,7 +38,6 @@ class ceoController extends Controller
      */
     public function store(Request $request)
     {
-        //
         \DB::table('users')
             ->insert([
                 'name'          => $request->name,
@@ -45,6 +45,11 @@ class ceoController extends Controller
                 'email'         => $request->email,
                 'role_id'       => $request->role_id
             ]);
+
+        if  ($request->role_id == 1) {
+            \Mail::to($request->email)->send(new CustomerMail($request));
+            return view('welcome');
+        }
 
         return view('welcome');
     }
