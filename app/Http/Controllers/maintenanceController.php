@@ -17,7 +17,7 @@ class maintenanceController extends Controller
     public function index()
     {
         $leases = \App\Leases::All();
-        $users = \App\User::All();
+        $users = \App\User::find(Auth::id());
         $storings = \App\Error::All();
 
         return view('maintenance/index',['users' => $users ,'leases' => $leases ,'storings'=>$storings]);

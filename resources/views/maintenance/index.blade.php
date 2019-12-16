@@ -6,7 +6,7 @@
 
         <select class="form-control" name="user_id" id="">
             @foreach($users as $user)
-                <option value="{{ $user->id }}"> {{ $user->id }}</option>
+                <option value="{{ $user->id }}"> {{ $user->name }}</option>
             @endforeach
         </select>
          <select class="form-control" name="lease_id" id="">

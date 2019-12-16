@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19057d3f-46b0-45db-8061-e60815377b26" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/maintenance/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/purchases/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Error.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Error.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PurachsesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PurachsesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/leasesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/leasesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/maintenanceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/maintenanceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Leases.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Leases.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/purchases.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/purchases.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/maintenance/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/maintenance/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/purchases/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/purchases/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/purchases/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/purchases/show.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,39 +19,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/maintenance/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+            <state relative-caret-position="136">
+              <caret line="8" column="63" selection-start-line="8" selection-start-column="63" selection-end-line="8" selection-end-column="63" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/inkoopController.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/maintenanceController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-104" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/purchases/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+            <state relative-caret-position="323">
+              <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+              <folding>
+                <element signature="e#39#67#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PurachsesController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-637" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/inkoop/create.blade.php">
+        <entry file="file://$PROJECT_DIR$/.env.example">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -95,6 +74,8 @@
         <option value="$PROJECT_DIR$/resources/views/mails/customerMail.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ceoController.php" />
         <option value="$PROJECT_DIR$/resources/views/purchases/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/maintenance/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/maintenanceController.php" />
       </list>
     </option>
   </component>
@@ -188,10 +169,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-20" />
-    <option name="y" value="-20" />
-    <option name="width" value="785" />
-    <option name="height" value="840" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectId" id="1TpcNz9ewXNvfeWZDhqqm3Mb5FH" />
   <component name="ProjectView">
@@ -236,6 +217,13 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="laravel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="laravel" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="maintenance" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -253,6 +241,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\barroc intense\laravel" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -306,16 +299,18 @@
       <workItem from="1575980530339" duration="2521000" />
       <workItem from="1575990185081" duration="27000" />
       <workItem from="1576238801884" duration="1004000" />
+      <workItem from="1576498142909" duration="770000" />
+      <workItem from="1576508783777" duration="48000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32087000" />
+    <option name="totallyTimeSpent" value="33756000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28208557" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28877005" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -462,9 +457,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/maintenanceController.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Quotation.php" />
@@ -618,6 +610,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/redirectController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-73" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -625,30 +622,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/inkoop/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/inkoopController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-104" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/purchases/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/redirectController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-73" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PurachsesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-637" />
+        <state>
+          <folding>
+            <element signature="e#40#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/inkoop/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/maintenance/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="63" selection-start-line="8" selection-start-column="63" selection-end-line="8" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/maintenanceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding>
+            <element signature="e#39#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.example">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
