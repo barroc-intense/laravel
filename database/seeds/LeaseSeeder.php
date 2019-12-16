@@ -20,6 +20,7 @@ class LeaseSeeder extends Seeder
                 \DB::table('leases')->insert([
                     'leaseType_id' => $faker->numberBetween(1, 2),
                     'customer_id'   => $user->id,
+                    'KVK'           => $faker->boolean,
                     'finance_id'    => $finances->random()->id,
                     'created_at'    => $faker->dateTime,
                     'updated_at'    => $faker->dateTime
