@@ -18,6 +18,7 @@ class CreateLeasesTable extends Migration
             $table->unsignedBigInteger('customer_id');
             $table->unsignedBigInteger('finance_id');
             $table->unsignedBigInteger('leaseType_id');
+            $table->boolean('KVK');
             $table->timestamps();
 
             $table->foreign('customer_id')
