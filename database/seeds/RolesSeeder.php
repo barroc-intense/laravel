@@ -34,7 +34,7 @@ class RolesSeeder extends Seeder
                 'rank' => 5
             ],
             [
-                'name' => 'inkoper',
+                'name' => 'Medewerker_sales',
                 'rank' => 6
             ],
             [
